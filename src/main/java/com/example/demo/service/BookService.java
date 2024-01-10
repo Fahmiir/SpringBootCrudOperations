@@ -21,5 +21,9 @@ public class BookService {
 	public List<BookModel> getData(){
 		return br.findAll();
 	}
+	
+	public void delete(int id) {
+		br.deleteById(id);
+	}
 
 }
