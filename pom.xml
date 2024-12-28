@@ -56,10 +56,16 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>id.co.bankbsi</groupId>
-			<artifactId>bsinet-oracle</artifactId>
-			<version>1.0</version>
-		</dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc8</artifactId>
+            <scope>12.2.0.1</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>  <!-- Use the latest version -->
+            <scope>provided</scope>
+        </dependency>
 	</dependencies>
 
 	<build>
