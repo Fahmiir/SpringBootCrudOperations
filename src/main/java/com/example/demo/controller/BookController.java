@@ -38,8 +38,8 @@ public class BookController {
 		bs.delete(id);
 	}
 	
-	@PutMapping("/save/{id}")
-	private void editBook(@RequestBody BookModel bm,@PathVariable int id) {
+	@PutMapping("/update")
+	private void editBook(@RequestBody BookModel bm) {
 		bs.saveOrUpdate(bm);
 	}
 }
