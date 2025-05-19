@@ -42,4 +42,9 @@ public class BookController {
 	private void editBook(@RequestBody BookModel bm) {
 		bs.saveOrUpdate(bm);
 	}
+
+	@PostMapping("/saveAll")
+	private void saveAll(@RequestBody List<BookModel> bm){
+		bs.saveMany(bm);
+	}
 }

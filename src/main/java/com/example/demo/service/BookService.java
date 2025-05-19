@@ -26,4 +26,8 @@ public class BookService {
 		br.deleteById(id);
 	}
 
+    public void saveMany(List<BookModel> bm){
+        br.saveAll(bm);
+    }
+
 }
