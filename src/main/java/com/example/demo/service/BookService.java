@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 import com.example.demo.model.BookModel;
 import com.example.demo.repository.BookRepository;
 
-@Service  
+import javax.transaction.Transactional;
+
+@Service
+@Transactional
 public class BookService {
 	
 	@Autowired
@@ -29,5 +32,9 @@ public class BookService {
     public void saveMany(List<BookModel> bm){
         br.saveAll(bm);
     }
+
+	public void deleteMultiple(List<Integer> ids){
+        br.deleteMultipleId(ids);
+	}
 
 }
