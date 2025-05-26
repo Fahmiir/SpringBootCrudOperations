@@ -37,4 +37,10 @@ public class BookService {
         br.deleteMultipleId(ids);
 	}
 
+	public void deleteMany(List<Integer> ids){
+		br.deleteMultipleId(ids);
+	}
+
+
+
 }

@@ -45,4 +45,9 @@ public class BookController {
 	public void deleteByMultipleId(@RequestParam("bookid") List<Integer> ids){
 		bs.deleteMultiple(ids);
 	}
+
+	@DeleteMapping("/deleteMany")
+	public void deleteMany(@RequestBody List<Integer> ids){
+		bs.deleteMany(ids);
+	}
 }
