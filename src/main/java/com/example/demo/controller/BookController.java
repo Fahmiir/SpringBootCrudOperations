@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import com.example.demo.dto.BookId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,6 +49,11 @@ public class BookController {
 
 	@DeleteMapping("/deleteMany")
 	public void deleteMany(@RequestBody List<Integer> ids){
+		bs.deleteMany(ids);
+	}
+
+	@DeleteMapping("/deleteManyKey")
+	public void deleteManyKey(@RequestBody List<Integer> ids){
 		bs.deleteMany(ids);
 	}
 }
